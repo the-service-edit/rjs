@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RJS Accounting Services &middot; Tax &amp; Accounting in Tewantin</title>
+<meta name="description" content="Tax returns, business accounting, SMSF and advisory from a friendly local team in Tewantin. Book your tax-time appointment with RJS Accounting Services." />
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --plum:#582A5F;
+  --plum-grape:#6E3A75;
+  --plum-deep:#3C1C42;
+  --plum-ink:#2A1430;
+  --lilac:#F4EEF6;
+  --lilac-2:#ECE0F0;
+  --coral:#F4805E;
+  --coral-deep:#E2613B;
+  --coral-soft:#FCE5DC;
+  --paper:#FCFAFB;
+  --white:#FFFFFF;
+  --ink:#2A1430;
+  --muted:#6F6577;
+  --faint:#9C93A3;
+  --line:#ECE4EF;
+  --line-2:#E3D8E7;
+
+  --font:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --wrap:1200px;
+  --gut:clamp(1.25rem,4.5vw,3rem);
+  --sect:clamp(4.5rem,9vw,8rem);
+  --r:22px;
+  --r-sm:14px;
+  --ease:cubic-bezier(.22,.7,.3,1);
+  --shadow:0 28px 60px -38px rgba(58,28,66,.55);
+  --shadow-sm:0 14px 34px -24px rgba(58,28,66,.45);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);
+  font-size:1.02rem;line-height:1.65;font-weight:400;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--plum);color:#fff}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:var(--gut);padding-right:var(--gut)}
+
+h1,h2,h3{margin:0;font-weight:800;letter-spacing:-.025em;line-height:1.04;color:var(--plum-ink)}
+.h-xl{font-size:clamp(2.4rem,5.6vw,4.2rem)}
+.h-lg{font-size:clamp(1.9rem,4vw,3rem)}
+.h-md{font-size:clamp(1.35rem,2.4vw,1.85rem);letter-spacing:-.02em}
+p{margin:0 0 1.1em}
+.lede{font-size:clamp(1.05rem,1.5vw,1.22rem);line-height:1.6;color:var(--muted);font-weight:400}
+.eyebrow{display:inline-flex;align-items:center;gap:.55rem;font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--plum);margin:0 0 1.1rem}
+.eyebrow.on-dark{color:var(--coral)}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--coral)}
+
+/* ============ BUTTONS ============ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font-family:var(--font);font-size:.96rem;font-weight:700;letter-spacing:-.01em;cursor:pointer;border:0;border-radius:999px;padding:.95rem 1.7rem;transition:transform .35s var(--ease),background .35s var(--ease),box-shadow .35s var(--ease),color .35s var(--ease)}
+.btn .arr{transition:transform .35s var(--ease)}
+.btn:hover .arr{transform:translateX(4px)}
+.btn-coral{background:var(--coral);color:var(--plum-ink);box-shadow:0 16px 30px -16px rgba(226,97,59,.7)}
+.btn-coral:hover{background:var(--coral-deep);color:#fff;transform:translateY(-2px)}
+.btn-plum{background:var(--plum);color:#fff}
+.btn-plum:hover{background:var(--plum-deep);transform:translateY(-2px)}
+.btn-line{background:transparent;border:1.5px solid var(--line-2);color:var(--plum-ink)}
+.btn-line:hover{border-color:var(--plum);transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--plum-ink)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.btn-lg{padding:1.1rem 2rem;font-size:1.02rem}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--coral);outline-offset:2px;border-radius:6px}
+
+/* ============ IMAGE FIELDS ============ */
+.img{position:relative;overflow:hidden;background:var(--lilac-2);isolation:isolate}
+.img::after{content:"";position:absolute;inset:0;z-index:3;opacity:.45;mix-blend-mode:overlay;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E")}
+.img .scene{position:absolute;inset:0;z-index:1;transition:transform 1.1s var(--ease)}
+.img:hover .scene{transform:scale(1.05)}
+.sc-warm{background:radial-gradient(120% 100% at 25% 20%,rgba(244,128,94,.5),transparent 55%),linear-gradient(150deg,#F3D9C9 0%,#E7B79f 55%,#C98a86 100%)}
+.sc-plum{background:radial-gradient(120% 100% at 75% 20%,rgba(244,128,94,.4),transparent 55%),linear-gradient(150deg,#7A4A80 0%,#582A5F 60%,#3C1C42 100%)}
+.sc-lilac{background:radial-gradient(110% 90% at 30% 20%,rgba(255,255,255,.6),transparent 55%),linear-gradient(155deg,#E8DAEC 0%,#D4BBDA 60%,#B493BC 100%)}
+.sc-soft{background:radial-gradient(120% 100% at 70% 25%,rgba(244,128,94,.35),transparent 55%),linear-gradient(150deg,#F6E7D6 0%,#E9CBB4 100%)}
+
+/* ============ ANNOUNCE BAR ============ */
+.announce{background:var(--plum);color:#fff;font-size:.85rem;font-weight:500;text-align:center}
+.announce .wrap{display:flex;align-items:center;justify-content:center;gap:.6rem;flex-wrap:wrap;padding:.6rem var(--gut)}
+.announce strong{font-weight:700}
+.announce a{color:var(--coral);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.announce .pulse{width:8px;height:8px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 0 rgba(244,128,94,.6);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(244,128,94,.55)}70%{box-shadow:0 0 0 9px rgba(244,128,94,0)}100%{box-shadow:0 0 0 0 rgba(244,128,94,0)}}
+@media (prefers-reduced-motion:reduce){.announce .pulse{animation:none}}
+
+/* ============ HEADER ============ */
+header{position:sticky;top:0;z-index:60;background:rgba(252,250,251,.9);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .4s var(--ease),box-shadow .4s var(--ease)}
+header.scrolled{border-bottom-color:var(--line);box-shadow:0 10px 30px -26px rgba(58,28,66,.5)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:78px;gap:1.5rem}
+.logo{display:flex;align-items:center}
+.logo img{height:38px;width:auto}
+nav.main{display:flex;align-items:center;gap:1.7rem}
+nav.main a{font-size:.9rem;font-weight:600;color:var(--muted);position:relative;transition:color .3s var(--ease)}
+nav.main a:hover{color:var(--plum-ink)}
+.head-act{display:flex;align-items:center;gap:1rem}
+.phone{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;color:var(--plum-ink);font-size:.92rem;white-space:nowrap}
+.phone svg{color:var(--coral)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;padding:8px;cursor:pointer}
+.burger span{width:24px;height:2px;background:var(--plum-ink);border-radius:2px;transition:transform .4s var(--ease),opacity .3s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.drawer{position:fixed;inset:0;z-index:55;background:var(--paper);display:flex;flex-direction:column;justify-content:center;padding:0 var(--gut);transform:translateY(-100%);transition:transform .55s var(--ease);visibility:hidden}
+.drawer.open{transform:translateY(0);visibility:visible}
+.drawer a{font-size:1.7rem;font-weight:700;color:var(--plum-ink);padding:.5rem 0;border-bottom:1px solid var(--line);letter-spacing:-.02em}
+.drawer a:first-child{border-top:1px solid var(--line)}
+.drawer .d-act{display:flex;flex-direction:column;gap:.8rem;margin-top:1.8rem}
+
+/* ============ HERO ============ */
+.hero{position:relative;background:linear-gradient(150deg,#5C2C63 0%,#3F1F46 70%);overflow:hidden;color:#fff;padding-top:clamp(3rem,6vw,5rem);padding-bottom:clamp(7rem,11vw,10rem)}
+.hero::before{content:"";position:absolute;top:-20%;right:-10%;width:55%;height:90%;background:radial-gradient(circle at 60% 40%,rgba(244,128,94,.55),transparent 60%);z-index:0}
+.hero::after{content:"";position:absolute;bottom:-40%;left:-10%;width:50%;height:90%;background:radial-gradient(circle,rgba(110,58,117,.6),transparent 60%);z-index:0}
+.hero .wrap{position:relative;z-index:2}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.hero h1{color:#fff;margin:0 0 1.4rem}
+.hero h1 .u{position:relative;white-space:nowrap}
+.hero h1 .u::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.16em;background:var(--coral);border-radius:2px;z-index:-1;opacity:.9}
+.hero p.sub{color:rgba(255,255,255,.82);font-size:clamp(1.05rem,1.5vw,1.22rem);max-width:42ch;margin:0 0 2rem;font-weight:400}
+.hero .cta-row{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:2.1rem}
+.hero .mini{display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;color:rgba(255,255,255,.8);font-size:.88rem;font-weight:500}
+.hero .stars{color:var(--coral);letter-spacing:1px}
+.hero-fig{position:relative}
+.hero-fig .img{aspect-ratio:4/4.4;border-radius:var(--r);box-shadow:0 40px 80px -40px rgba(0,0,0,.6)}
+.chip{position:absolute;background:#fff;color:var(--plum-ink);border-radius:16px;padding:.8rem 1.1rem;box-shadow:var(--shadow);display:flex;align-items:center;gap:.7rem;z-index:4}
+.chip .ico{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:var(--coral-soft);color:var(--coral-deep);flex:0 0 auto}
+.chip .ico.plum{background:var(--lilac-2);color:var(--plum)}
+.chip b{display:block;font-size:1.05rem;font-weight:800;line-height:1.1}
+.chip span{font-size:.74rem;color:var(--muted);font-weight:600}
+.chip.c1{top:8%;left:-22px}
+.chip.c2{bottom:9%;right:-18px}
+
+/* ============ QUICK BOOK BAR ============ */
+.qb-shell{position:relative;z-index:30;margin-top:calc(-1 * clamp(4rem,7vw,6rem))}
+.qb{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);padding:clamp(1.3rem,2.5vw,1.8rem);display:grid;grid-template-columns:1.2fr 1fr 1fr auto;gap:1rem;align-items:end}
+.qb .fld{display:flex;flex-direction:column;gap:.45rem;min-width:0}
+.qb label{font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--plum)}
+.qb select,.qb input{font-family:var(--font);font-size:.95rem;font-weight:500;color:var(--ink);background:var(--lilac);border:1.5px solid transparent;border-radius:12px;padding:.85rem .95rem;width:100%;transition:border-color .3s var(--ease),background .3s var(--ease)}
+.qb select:focus,.qb input:focus{outline:none;border-color:var(--plum);background:#fff}
+.qb .btn{height:fit-content;white-space:nowrap}
+.qb-note{display:flex;align-items:center;gap:.5rem;margin-top:1rem;font-size:.82rem;color:var(--muted)}
+.qb-note svg{color:var(--coral-deep);flex:0 0 auto}
+
+/* ============ TRUST ============ */
+.trust{padding:clamp(2.5rem,4vw,3.5rem) 0}
+.trust .row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1rem 2.6rem}
+.trust .t{display:flex;align-items:center;gap:.55rem;font-size:.9rem;font-weight:600;color:var(--muted)}
+.trust .t svg{color:var(--plum)}
+.trust .t .stars{color:var(--coral);letter-spacing:1px}
+
+/* ============ SECTION ============ */
+.section{padding-top:var(--sect);padding-bottom:var(--sect)}
+.section.tint{background:var(--lilac)}
+.sec-head{max-width:640px;margin:0 auto clamp(2.6rem,5vw,3.6rem);text-align:center}
+.sec-head.left{margin-left:0;text-align:left}
+.sec-head .eyebrow{justify-content:center}
+.sec-head.left .eyebrow{justify-content:flex-start}
+.sec-head p{margin:1rem 0 0;color:var(--muted)}
+
+/* ============ SERVICES CAROUSEL ============ */
+.svc-top{display:flex;justify-content:space-between;align-items:flex-end;gap:1.5rem;flex-wrap:wrap;margin-bottom:2.2rem}
+.svc-top .h-lg{max-width:18ch}
+.svc-nav{display:flex;gap:.6rem}
+.svc-nav button{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--line-2);background:#fff;color:var(--plum-ink);cursor:pointer;display:grid;place-items:center;transition:background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease)}
+.svc-nav button:hover{background:var(--plum);color:#fff;border-color:var(--plum)}
+.svc-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 2*1.4rem)/3);gap:1.4rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:.5rem;margin:0 calc(-1*var(--gut));padding-left:var(--gut);padding-right:var(--gut)}
+.svc-track::-webkit-scrollbar{display:none}
+.svc-card{scroll-snap-align:start;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.svc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.svc-card .top{position:relative;aspect-ratio:16/9}
+.svc-card .top .ico{position:absolute;left:16px;bottom:-22px;z-index:5;width:54px;height:54px;border-radius:15px;background:#fff;display:grid;place-items:center;color:var(--plum);box-shadow:var(--shadow-sm)}
+.svc-card .body{padding:2rem 1.6rem 1.6rem;display:flex;flex-direction:column;flex:1}
+.svc-card h3{font-size:1.28rem;margin:0 0 .5rem}
+.svc-card p{font-size:.94rem;color:var(--muted);margin:0 0 1.3rem}
+.svc-card .go{margin-top:auto;display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:.9rem;color:var(--coral-deep)}
+.svc-card .go .arr{transition:transform .35s var(--ease)}
+.svc-card:hover .go .arr{transform:translateX(4px)}
+.dots{display:flex;justify-content:center;gap:.5rem;margin-top:1.8rem}
+.dots button{width:8px;height:8px;border-radius:50%;border:0;background:var(--line-2);cursor:pointer;padding:0;transition:width .3s var(--ease),background .3s var(--ease)}
+.dots button.active{width:26px;background:var(--coral);border-radius:6px}
+
+/* ============ STEPS ============ */
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.2rem,2.5vw,2rem)}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:2rem 1.8rem;position:relative;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.step:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm)}
+.step .n{font-size:.8rem;font-weight:800;letter-spacing:.1em;color:var(--coral-deep);margin-bottom:1rem}
+.step h3{font-size:1.25rem;margin:0 0 .5rem}
+.step p{font-size:.95rem;color:var(--muted);margin:0}
+.step .line{position:absolute;top:2.4rem;right:-1rem;width:2rem;height:2px;background:var(--line-2);z-index:1}
+
+/* ============ BENEFITS ============ */
+.ben{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(2.5rem,6vw,5rem);align-items:center}
+.ben-list{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem 1.8rem}
+.ben-item .ico{width:50px;height:50px;border-radius:15px;display:grid;place-items:center;margin-bottom:1rem;background:var(--coral-soft);color:var(--coral-deep)}
+.ben-item:nth-child(even) .ico{background:var(--lilac-2);color:var(--plum)}
+.ben-item h3{font-size:1.1rem;margin:0 0 .35rem}
+.ben-item p{font-size:.92rem;color:var(--muted);margin:0}
+.ben-fig .img{aspect-ratio:4/4.6;border-radius:var(--r);box-shadow:var(--shadow)}
+
+/* ============ TEAM ============ */
+.team-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(1.1rem,2vw,1.6rem)}
+.mem{display:block;width:100%;text-align:left;background:none;border:0;padding:0;margin:0;font:inherit;color:inherit;cursor:pointer}
+.mem .pic{aspect-ratio:1/1.12;border-radius:var(--r-sm);overflow:hidden;position:relative;background:var(--lilac-2)}
+.mem .pic .scene{transition:transform .9s var(--ease)}
+.mem .pic .ini{position:absolute;inset:0;display:grid;place-items:center;z-index:2;font-weight:800;font-size:clamp(1.7rem,3vw,2.4rem);color:rgba(255,255,255,.85);letter-spacing:.02em}
+.mem .pic .view{position:absolute;inset:0;z-index:4;display:flex;align-items:flex-end;justify-content:flex-start;gap:.4rem;padding:.9rem;opacity:0;background:linear-gradient(to top,rgba(42,20,48,.72),transparent 58%);color:#fff;font-size:.76rem;font-weight:700;letter-spacing:.01em;transition:opacity .35s var(--ease)}
+.mem:hover .pic .scene{transform:scale(1.05)}
+.mem:hover .pic .view,.mem:focus-visible .pic .view{opacity:1}
+.mem:focus-visible{outline:none}
+.mem:focus-visible .pic{outline:3px solid var(--coral);outline-offset:3px}
+.mem .name{font-weight:800;margin:.9rem 0 .1rem;font-size:1.02rem;letter-spacing:-.02em}
+.mem .role{font-size:.74rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--faint)}
+.mem .pic .photo,.modal-pic .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;z-index:3}
+.mem .pic .photo{transition:transform .9s var(--ease)}
+.mem:hover .pic .photo{transform:scale(1.05)}
+
+/* ============ BIO MODAL ============ */
+.modal[hidden]{display:none}
+.modal{position:fixed;inset:0;z-index:90;display:flex;align-items:center;justify-content:center;padding:clamp(1rem,3vw,2rem)}
+.modal-backdrop{position:absolute;inset:0;background:rgba(42,20,48,.55);backdrop-filter:blur(6px);animation:fade .3s var(--ease)}
+.modal-card{position:relative;z-index:1;width:100%;max-width:720px;max-height:88vh;background:#fff;border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 40px 90px -40px rgba(42,20,48,.7);animation:pop .4s var(--ease)}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes pop{from{opacity:0;transform:translateY(16px) scale(.985)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.modal-backdrop,.modal-card{animation:none}}
+.modal-x{position:absolute;top:14px;right:14px;z-index:5;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.2);color:#fff;font-size:1.5rem;line-height:1;cursor:pointer;display:grid;place-items:center;transition:background .3s var(--ease)}
+.modal-x:hover{background:rgba(255,255,255,.34)}
+.modal-head{display:flex;align-items:center;gap:1.3rem;padding:clamp(1.6rem,3vw,2.1rem);background:linear-gradient(135deg,#5C2C63,#3C1C42);color:#fff;position:relative;overflow:hidden}
+.modal-head::before{content:"";position:absolute;top:-40%;right:-8%;width:48%;height:170%;background:radial-gradient(circle,rgba(244,128,94,.45),transparent 60%)}
+.modal-pic{position:relative;z-index:1;flex:0 0 auto;width:84px;height:84px;border-radius:18px;overflow:hidden;background:var(--lilac-2)}
+.modal-pic .scene{position:absolute;inset:0}
+.modal-pic .ini{position:absolute;inset:0;display:grid;place-items:center;z-index:2;font-weight:800;font-size:1.7rem;color:rgba(255,255,255,.9)}
+.modal-head>.txt{position:relative;z-index:1;min-width:0}
+.modal-role{font-size:.72rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--coral)}
+.modal-head h3{color:#fff;font-size:clamp(1.45rem,3vw,1.95rem);margin:.25rem 0 0;letter-spacing:-.025em;line-height:1.1}
+.modal-body{padding:clamp(1.6rem,3vw,2.2rem);overflow-y:auto}
+.modal-body .blk{margin-bottom:1.6rem}
+.modal-body .blk:last-child{margin-bottom:0}
+.modal-body .blk h4{display:inline-flex;align-items:center;gap:.5rem;font-size:.74rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--plum);margin:0 0 .7rem}
+.modal-body .blk h4::before{content:"";width:18px;height:2px;background:var(--coral);border-radius:2px}
+.modal-body p{color:var(--muted);font-size:.97rem;line-height:1.62;margin:0 0 .9rem}
+.modal-body p:last-child{margin-bottom:0}
+.modal-foot{padding:1.1rem clamp(1.6rem,3vw,2.2rem);border-top:1px solid var(--line);display:flex;justify-content:flex-end}
+@media (max-width:560px){.modal-head{flex-direction:column;text-align:center}.modal-foot .btn{width:100%}}
+
+/* ============ DIFFERENCE / B1G1 ============ */
+.b1g{background:var(--plum);color:#fff;border-radius:0;position:relative;overflow:hidden}
+.b1g::before{content:"";position:absolute;inset:0;background:radial-gradient(110% 80% at 85% 10%,rgba(244,128,94,.4),transparent 55%);z-index:0}
+.b1g .wrap{position:relative;z-index:1;text-align:center;max-width:820px}
+.b1g .big{font-size:clamp(1.6rem,3.6vw,2.7rem);font-weight:800;letter-spacing:-.025em;line-height:1.2;color:#fff;margin:0 auto 1.4rem;max-width:22ch}
+.b1g .big em{font-style:normal;color:var(--coral)}
+.b1g p.s{color:rgba(255,255,255,.82);max-width:56ch;margin:0 auto 2.4rem}
+.b1g-stats{display:flex;justify-content:center;flex-wrap:wrap;gap:clamp(1.8rem,5vw,4rem)}
+.b1g-stats .n{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;color:#fff}
+.b1g-stats .l{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:.3rem}
+
+/* ============ TESTIMONIALS ============ */
+.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.2rem,2.5vw,1.8rem)}
+.tcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:2rem 1.7rem;display:flex;flex-direction:column}
+.tcard .stars{color:var(--coral);letter-spacing:1px;margin-bottom:1rem}
+.tcard blockquote{margin:0 0 1.5rem;font-size:1.05rem;line-height:1.55;color:var(--plum-ink);font-weight:500}
+.tcard .by{margin-top:auto;font-size:.82rem;font-weight:700;color:var(--muted)}
+
+/* ============ FAQ ============ */
+.faq{max-width:760px;margin:0 auto}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:var(--r-sm);margin-bottom:.9rem;transition:box-shadow .3s var(--ease)}
+.faq details[open]{box-shadow:var(--shadow-sm)}
+.faq summary{list-style:none;cursor:pointer;padding:1.3rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1.2rem;font-weight:700;font-size:1.04rem;color:var(--plum-ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq .ic{flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:var(--lilac);position:relative;transition:background .3s var(--ease)}
+.faq details[open] .ic{background:var(--coral-soft)}
+.faq .ic::before,.faq .ic::after{content:"";position:absolute;background:var(--plum);top:50%;left:50%;transition:transform .35s var(--ease)}
+.faq .ic::before{width:11px;height:1.8px;transform:translate(-50%,-50%)}
+.faq .ic::after{width:1.8px;height:11px;transform:translate(-50%,-50%)}
+.faq details[open] .ic::after{transform:translate(-50%,-50%) scaleY(0)}
+.faq .ans{padding:0 1.5rem 1.4rem;color:var(--muted);max-width:62ch}
+.faq .ans p{margin:0}
+
+/* ============ FINAL CTA ============ */
+.cta2{position:relative;overflow:hidden;background:linear-gradient(120deg,#582A5F 0%,#3C1C42 55%);color:#fff;border-radius:clamp(20px,3vw,32px);padding:clamp(2.6rem,5vw,4.5rem);text-align:center}
+.cta2::before{content:"";position:absolute;top:-30%;right:-12%;width:50%;height:120%;background:radial-gradient(circle,rgba(244,128,94,.55),transparent 60%);z-index:0}
+.cta2 .inner{position:relative;z-index:1;max-width:640px;margin:0 auto}
+.cta2 h2{color:#fff;margin:0 0 1.1rem}
+.cta2 p{color:rgba(255,255,255,.82);margin:0 auto 2rem;max-width:42ch}
+.cta2 .cta-row{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+
+/* ============ FOOTER ============ */
+footer{background:var(--plum-ink);color:#C9BCCE;padding-top:clamp(3.5rem,6vw,5rem);padding-bottom:2rem}
+.f-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2.2rem;padding-bottom:2.8rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.f-logo img{height:42px;width:auto;margin-bottom:1.2rem}
+.f-top .blurb{color:#9F90A6;font-size:.93rem;max-width:32ch;margin:0}
+.f-col h4{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#897B90;margin:0 0 1.1rem}
+.f-col a,.f-col span{display:block;color:#C9BCCE;font-size:.93rem;margin-bottom:.65rem;transition:color .3s var(--ease)}
+.f-col a:hover{color:#fff}
+.f-bot{display:flex;flex-wrap:wrap;gap:.8rem 2rem;justify-content:space-between;align-items:center;padding-top:1.7rem;font-size:.78rem;color:#7C6F83}
+.f-bot a{color:#7C6F83}.f-bot a:hover{color:#C9BCCE}
+.legal{max-width:62ch;line-height:1.6}
+
+/* ============ STICKY MOBILE ============ */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-2);box-shadow:0 -10px 30px -18px rgba(58,28,66,.5)}
+.sticky a{display:flex;align-items:center;justify-content:center;gap:.5rem;padding:1rem;font-weight:700;font-size:.92rem}
+.sticky .call{background:#fff;color:var(--plum-ink)}
+.sticky .book{background:var(--coral);color:var(--plum-ink)}
+
+/* ============ REVEAL ============ */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+.js .stagger>*{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .stagger.in>*{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .reveal,.js .stagger>*{opacity:1!important;transform:none!important;transition:none!important}.img .scene{transition:none!important}}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-fig{order:-1;max-width:440px}
+  .chip.c1{left:6px}.chip.c2{right:6px}
+  .qb{grid-template-columns:1fr 1fr;gap:.9rem}
+  .qb .btn{grid-column:1/-1}
+  .ben{grid-template-columns:1fr}
+  .ben-fig{order:-1;max-width:420px}
+  .team-grid{grid-template-columns:repeat(4,1fr)}
+  .tg{grid-template-columns:1fr}
+  .svc-track{grid-auto-columns:calc((100% - 1.4rem)/2)}
+  .step .line{display:none}
+}
+@media (max-width:760px){
+  nav.main,.head-act .phone,.head-act .btn{display:none}
+  .burger{display:flex}
+  .steps-grid{grid-template-columns:1fr}
+  .ben-list{grid-template-columns:1fr}
+  .svc-track{grid-auto-columns:86%}
+  .team-grid{grid-template-columns:repeat(3,1fr)}
+  .sticky{display:grid}
+  body{padding-bottom:54px}
+  .qb{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCE -->
+<div class="announce">
+  <div class="wrap">
+    <span class="pulse" aria-hidden="true"></span>
+    <span><strong>Tax time 2026 is here.</strong> Book early to beat the rush and lodge with time to spare. <a href="#book">Book your appointment &rarr;</a></span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header id="top">
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="RJS Accounting Services home"><img src="data:image/png;base64,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" alt="RJS Accounting Services" /></a>
+    <nav class="main" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#how">How it works</a>
+      <a href="#why">Why RJS</a>
+      <a href="#team">Our team</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="head-act">
+      <a class="phone" href="tel:0754999299"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h3l2 5-2 1a11 11 0 0 0 5 5l1-2 5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>07 5449 9299</a>
+      <a class="btn btn-coral" href="#book">Book appointment</a>
+      <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <a href="#services">Services</a>
+  <a href="#how">How it works</a>
+  <a href="#why">Why RJS</a>
+  <a href="#team">Our team</a>
+  <a href="#faq">FAQ</a>
+  <div class="d-act">
+    <a class="btn btn-coral btn-lg" href="#book">Book appointment</a>
+    <a class="btn btn-line btn-lg" href="tel:0754999299">Call 07 5449 9299</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy reveal">
+        <h1 class="h-xl">Get your tax <span class="u">sorted</span>, without the stress.</h1>
+        <p class="sub">RJS is a friendly local team in Tewantin, looking after tax, accounting, SMSF and advice for businesses and families right across Australia. Real people, plain answers, lodged on time.</p>
+        <div class="cta-row">
+          <a class="btn btn-coral btn-lg" href="#book">Book your tax appointment <span class="arr">&rarr;</span></a>
+          <a class="btn btn-white btn-lg" href="#services">See our services</a>
+        </div>
+        <div class="mini">
+          <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span>Rated five stars by local clients</span>
+          <span aria-hidden="true">&middot;</span>
+          <span>Registered Tax Agent</span>
+        </div>
+      </div>
+      <figure class="hero-fig reveal" style="margin:0">
+        <!-- Replace with a real DSLR photo of the team / a client meeting -->
+        <div class="img"><div class="scene sc-warm"></div></div>
+        <div class="chip c1"><span class="ico plum"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.2"/><circle cx="16.5" cy="9.5" r="2.4"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0M14.5 19a5 5 0 0 1 6.5-4.6"/></svg></span><span><b>10+</b><span>specialists on your side</span></span></div>
+        <div class="chip c2"><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>On time</b><span>lodged, every time</span></span></div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK BOOK BAR -->
+<div class="wrap qb-shell" id="book">
+  <form class="qb reveal" onsubmit="return rjsBook(event)">
+    <div class="fld">
+      <label for="qb-svc">What do you need?</label>
+      <select id="qb-svc">
+        <option>Individual tax return</option>
+        <option>Business accounting &amp; tax</option>
+        <option>SMSF</option>
+        <option>Bookkeeping / Xero / MYOB</option>
+        <option>Business advisory</option>
+        <option>Not sure yet</option>
+      </select>
+    </div>
+    <div class="fld">
+      <label for="qb-name">Your name</label>
+      <input id="qb-name" type="text" placeholder="First and last name" autocomplete="name" />
+    </div>
+    <div class="fld">
+      <label for="qb-contact">Email or phone</label>
+      <input id="qb-contact" type="text" placeholder="So we can reach you" autocomplete="email" />
+    </div>
+    <button class="btn btn-coral btn-lg" type="submit">Request a callback <span class="arr">&rarr;</span></button>
+  </form>
+  <div class="qb-note reveal">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+    No obligation. We will get back to you within one business day, or call us now on <a href="tel:0754999299" style="color:var(--plum);font-weight:700;margin-left:.3rem">07 5449 9299</a>.
+  </div>
+</div>
+
+<!-- TRUST -->
+<section class="trust">
+  <div class="wrap reveal">
+    <div class="row">
+      <span class="t"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>Google Reviews</span>
+      <span class="t"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/></svg>Xero Partner</span>
+      <span class="t"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 14l3-4 2 2 3-5"/></svg>MYOB Partner</span>
+      <span class="t"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>QuickBooks</span>
+      <span class="t"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Registered Tax Agent</span>
+      <span class="t"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Clients Australia-wide</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section tint" id="services">
+  <div class="wrap">
+    <div class="svc-top reveal">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>What we do</span>
+        <h2 class="h-lg">Everything you need, under one roof.</h2>
+      </div>
+      <div class="svc-nav">
+        <button type="button" aria-label="Previous" data-dir="-1"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button type="button" aria-label="Next" data-dir="1"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+
+    <div class="svc-track" id="svcTrack">
+      <article class="svc-card">
+        <div class="top img"><div class="scene sc-warm"></div><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 3h6l4 4v14H6V5"/><path d="M14 3v4h4"/><path d="M9 13h6M9 17h4"/></svg></span></div>
+        <div class="body"><h3>Individual Tax Returns</h3><p>Quick, accurate returns that make sure you claim everything you are entitled to. Most done in one easy appointment.</p><a class="go" href="#book">Book a time <span class="arr">&rarr;</span></a></div>
+      </article>
+      <article class="svc-card">
+        <div class="top img"><div class="scene sc-plum"></div><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg></span></div>
+        <div class="body"><h3>Business Accounting &amp; Tax</h3><p>Financial statements, BAS, IAS and company returns handled in the background, so you can get on with running the business.</p><a class="go" href="#book">Book a time <span class="arr">&rarr;</span></a></div>
+      </article>
+      <article class="svc-card">
+        <div class="top img"><div class="scene sc-lilac"></div><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></span></div>
+        <div class="body"><h3>SMSF</h3><p>Self-managed super fund administration, compliance and advice, kept simple and kept on the right side of the rules.</p><a class="go" href="#book">Book a time <span class="arr">&rarr;</span></a></div>
+      </article>
+      <article class="svc-card">
+        <div class="top img"><div class="scene sc-soft"></div><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h2M8 17h5"/></svg></span></div>
+        <div class="body"><h3>Bookkeeping &amp; Software</h3><p>Registered partners for Xero, MYOB and QuickBooks. We set it up, keep it tidy, and help whenever you get stuck.</p><a class="go" href="#book">Book a time <span class="arr">&rarr;</span></a></div>
+      </article>
+      <article class="svc-card">
+        <div class="top img"><div class="scene sc-warm"></div><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5M4 19l5-4 4 3 7-7"/></svg></span></div>
+        <div class="body"><h3>Business Advisory</h3><p>Plans, budgets, cashflow forecasts and honest coaching. A second set of eyes on where the business is headed.</p><a class="go" href="#book">Book a time <span class="arr">&rarr;</span></a></div>
+      </article>
+      <article class="svc-card">
+        <div class="top img"><div class="scene sc-plum"></div><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M5 8l7-5 7 5"/><path d="M5 8v8l7 4 7-4V8"/></svg></span></div>
+        <div class="body"><h3>Succession Planning</h3><p>Not the easiest conversation, but an important one. We walk you through it gently and keep a record safe for your family.</p><a class="go" href="#book">Book a time <span class="arr">&rarr;</span></a></div>
+      </article>
+    </div>
+    <div class="dots" id="svcDots"></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" id="how">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><span class="dot"></span>How it works</span>
+      <h2 class="h-lg">Three easy steps to done.</h2>
+      <p>Getting started takes a few minutes. We do the heavy lifting from there.</p>
+    </div>
+    <div class="steps-grid stagger reveal">
+      <div class="step"><div class="n">STEP 01</div><h3>Book a time</h3><p>Pick an appointment, or request a callback using the form above. Tell us roughly what you need.</p><span class="line"></span></div>
+      <div class="step"><div class="n">STEP 02</div><h3>Send your bits</h3><p>We tell you exactly what to bring or upload. No guessing, no chasing, no jargon.</p><span class="line"></span></div>
+      <div class="step"><div class="n">STEP 03</div><h3>We prepare &amp; lodge</h3><p>We do the work, check it twice, walk you through it, and lodge it on time. Sorted.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS / WHY -->
+<section class="section tint" id="why">
+  <div class="wrap ben">
+    <figure class="ben-fig reveal" style="margin:0">
+      <!-- Real photo: warm client conversation across a timber table -->
+      <div class="img"><div class="scene sc-lilac"></div></div>
+    </figure>
+    <div class="reveal">
+      <span class="eyebrow"><span class="dot"></span>Why RJS</span>
+      <h2 class="h-lg" style="margin-bottom:1rem">Big-firm know-how. Local-firm care.</h2>
+      <p class="lede" style="margin-bottom:2rem">We are a small Tewantin team of ten who do big things. You get the same people year after year, and advice in words that actually make sense.</p>
+      <div class="ben-list stagger">
+        <div class="ben-item"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 4v5c0 4.5-3.4 7.5-8 9-4.6-1.5-8-4.5-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Registered tax agents</h3><p>Qualified, accountable and on the TPB register. Your return is in safe hands.</p></div>
+        <div class="ben-item"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Fast and on time</h3><p>We respect your time and the ATO's deadlines. No last-minute panic.</p></div>
+        <div class="ben-item"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div><h3>Claim what's yours</h3><p>We know the deductions you might miss, so nothing is left on the table.</p></div>
+        <div class="ben-item"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Here all year</h3><p>Not just at tax time. Call us whenever a question comes up.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section" id="team">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><span class="dot"></span>The people</span>
+      <h2 class="h-lg">Ten of us. One friendly office.</h2>
+      <p>The team you meet on day one is the team you keep.</p>
+    </div>
+    <div class="team-grid stagger reveal">
+      <button class="mem" type="button" data-bio="kylie" aria-haspopup="dialog"><div class="pic"><div class="scene sc-plum"></div><span class="ini">KA</span><img class="photo" src="images/kylie.jpg" alt="Kylie Anderson" loading="lazy" onerror="this.remove()" /><span class="view"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>View profile</span></div><div class="name">Kylie Anderson</div><div class="role">Director</div></button>
+      <button class="mem" type="button" data-bio="nell" aria-haspopup="dialog"><div class="pic"><div class="scene sc-warm"></div><span class="ini">NP</span><img class="photo" src="images/nell.jpg" alt="Nell Purser" loading="lazy" onerror="this.remove()" /><span class="view"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>View profile</span></div><div class="name">Nell Purser</div><div class="role">Accountant &amp; Team Leader</div></button>
+      <button class="mem" type="button" data-bio="penelope" aria-haspopup="dialog"><div class="pic"><div class="scene sc-lilac"></div><span class="ini">PM</span><img class="photo" src="images/penelope.jpg" alt="Penelope Marsh" loading="lazy" onerror="this.remove()" /><span class="view"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>View profile</span></div><div class="name">Penelope Marsh</div><div class="role">Chartered Accountant</div></button>
+      <button class="mem" type="button" data-bio="scott" aria-haspopup="dialog"><div class="pic"><div class="scene sc-soft"></div><span class="ini">SE</span><img class="photo" src="images/scott.jpg" alt="Scott Edmonds" loading="lazy" onerror="this.remove()" /><span class="view"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>View profile</span></div><div class="name">Scott Edmonds</div><div class="role">Accountant</div></button>
+      <button class="mem" type="button" data-bio="terry" aria-haspopup="dialog"><div class="pic"><div class="scene sc-plum"></div><span class="ini">TB</span><img class="photo" src="images/terry.jpg" alt="Terry Bates" loading="lazy" onerror="this.remove()" /><span class="view"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>View profile</span></div><div class="name">Terry Bates</div><div class="role">Accountant</div></button>
+      <button class="mem" type="button" data-bio="sunil" aria-haspopup="dialog"><div class="pic"><div class="scene sc-warm"></div><span class="ini">SP</span><img class="photo" src="images/sunil.jpg" alt="Sunil Singh Panwar" loading="lazy" onerror="this.remove()" /><span class="view"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>View profile</span></div><div class="name">Sunil Singh Panwar</div><div class="role">Accountant</div></button>
+      <button class="mem" type="button" data-bio="marie" aria-haspopup="dialog"><div class="pic"><div class="scene sc-lilac"></div><span class="ini">MC</span><img class="photo" src="images/marie.jpg" alt="Marie Collard" loading="lazy" onerror="this.remove()" /><span class="view"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>View profile</span></div><div class="name">Marie Collard</div><div class="role">Accountant / Bookkeeper</div></button>
+      <button class="mem" type="button" data-bio="tayla" aria-haspopup="dialog"><div class="pic"><div class="scene sc-soft"></div><span class="ini">TB</span><img class="photo" src="images/tayla.jpg" alt="Tayla Bodard" loading="lazy" onerror="this.remove()" /><span class="view"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>View profile</span></div><div class="name">Tayla Bodard</div><div class="role">Assistant Accountant</div></button>
+      <button class="mem" type="button" data-bio="karen" aria-haspopup="dialog"><div class="pic"><div class="scene sc-plum"></div><span class="ini">KE</span><img class="photo" src="images/karen.jpg" alt="Karen Ebzery" loading="lazy" onerror="this.remove()" /><span class="view"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>View profile</span></div><div class="name">Karen Ebzery</div><div class="role">Client Services</div></button>
+      <button class="mem" type="button" data-bio="jane" aria-haspopup="dialog"><div class="pic"><div class="scene sc-warm"></div><span class="ini">JL</span><img class="photo" src="images/jane.jpg" alt="Jane Long" loading="lazy" onerror="this.remove()" /><span class="view"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>View profile</span></div><div class="name">Jane Long</div><div class="role">Client Services</div></button>
+    </div>
+    <p class="reveal" style="margin:2rem 0 0;color:var(--faint);font-size:.9rem">Tap any of the team to read their story.</p>
+  </div>
+</section>
+
+<!-- B1G1 -->
+<section class="section b1g">
+  <div class="wrap reveal">
+    <span class="eyebrow on-dark" style="justify-content:center"><span class="dot"></span>Making a difference</span>
+    <p class="big">Every time we work together, <em>something good happens</em> somewhere in the world.</p>
+    <p class="s">RJS is a proud partner in the global giving initiative B1G1, Buy1Give1. Our everyday work quietly funds real impact in communities that need it. When you are part of RJS, that difference is yours too.</p>
+    <div class="b1g-stats">
+      <div><div class="n">B1G1</div><div class="l">Giving partner</div></div>
+      <div><div class="n">Free&nbsp;to&nbsp;Shine</div><div class="l">Supported cause</div></div>
+      <div><div class="n">Every&nbsp;day</div><div class="l">Impact, not once a year</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><span class="dot"></span>In their words</span>
+      <h2 class="h-lg">Clients who stick around.</h2>
+    </div>
+    <div class="tg stagger reveal">
+      <figure class="tcard" style="margin:0"><div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>They explain things in a way that finally makes sense. We have never once felt like just another file.</blockquote><figcaption class="by">Business owner &middot; Noosa</figcaption></figure>
+      <figure class="tcard" style="margin:0"><div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>Same friendly faces every year and advice we genuinely trust. Tax time stopped being a thing I dread.</blockquote><figcaption class="by">Family client &middot; Sunshine Coast</figcaption></figure>
+      <figure class="tcard" style="margin:0"><div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>Switched to RJS two years ago and only wish I had done it sooner. Quick, clear and genuinely helpful.</blockquote><figcaption class="by">Sole trader &middot; Tewantin</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section tint" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><span class="dot"></span>Questions</span>
+      <h2 class="h-lg">Good to know.</h2>
+    </div>
+    <div class="faq reveal">
+      <details open><summary>How much does a tax return cost?<span class="ic"></span></summary><div class="ans"><p>It depends on how simple or involved your situation is, so we will give you a clear quote up front before any work starts. No surprises, ever. The easiest way to find out is to book a quick chat or request a callback.</p></div></details>
+      <details><summary>Do you only help Sunshine Coast clients?<span class="ic"></span></summary><div class="ans"><p>Not at all. Our office is in Tewantin, but we look after clients in every state and territory in Australia, and a few overseas. Most of the work happens by phone, email and video, with a coffee in person whenever you are nearby.</p></div></details>
+      <details><summary>Which accounting software do you support?<span class="ic"></span></summary><div class="ans"><p>We are registered partners for Xero, MYOB and QuickBooks, and have worked across plenty of specialist programs over the years. If you already have a system you like, we will work within it. If you are starting fresh, we will help you choose.</p></div></details>
+      <details><summary>What do I need to bring to my appointment?<span class="ic"></span></summary><div class="ans"><p>Once you book, we send you a short, plain-English checklist tailored to your situation, so you know exactly what to gather. No guessing, and no chasing.</p></div></details>
+      <details><summary>Can you help with my SMSF?<span class="ic"></span></summary><div class="ans"><p>Yes. We handle the administration, the annual compliance and the audit coordination, and we make sure you understand what you are responsible for, so the control of your super genuinely stays yours.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section" style="padding-bottom:var(--sect)">
+  <div class="wrap">
+    <div class="cta2 reveal">
+      <div class="inner">
+        <h2 class="h-lg">Ready to get your tax sorted?</h2>
+        <p>Book your appointment today and walk in knowing it is handled. Friendly team, clear advice, lodged on time.</p>
+        <div class="cta-row">
+          <a class="btn btn-coral btn-lg" href="#book">Book your appointment <span class="arr">&rarr;</span></a>
+          <a class="btn btn-white btn-lg" href="tel:0754999299">Call 07 5449 9299</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div class="f-logo">
+        <img src="data:image/png;base64,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" alt="RJS Accounting Services" />
+        <p class="blurb">A friendly Tewantin firm of ten, looking after tax, accounting and advice for businesses and families across Australia.</p>
+      </div>
+      <div class="f-col">
+        <h4>Services</h4>
+        <a href="#services">Tax Returns</a>
+        <a href="#services">Business Accounting</a>
+        <a href="#services">SMSF</a>
+        <a href="#services">Bookkeeping</a>
+        <a href="#services">Advisory</a>
+      </div>
+      <div class="f-col">
+        <h4>Visit</h4>
+        <span>Suite 19, Cooloola Centre</span>
+        <span>97 Poinciana Avenue</span>
+        <span>Tewantin QLD 4565</span>
+        <span>PO Box 11, Tewantin</span>
+      </div>
+      <div class="f-col">
+        <h4>Contact</h4>
+        <a href="tel:0754999299">07 5449 9299</a>
+        <a href="mailto:info@rjsaccounting.com.au">info@rjsaccounting.com.au</a>
+        <a href="https://www.facebook.com/RJS-Accounting-Services-Pty-Ltd-454932944517655/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.tpb.gov.au/public-register" target="_blank" rel="noopener">TPB register</a>
+      </div>
+    </div>
+    <div class="f-bot">
+      <span class="legal">RJS Accounting Services Pty Ltd &middot; ACN 010 649 984. Liability limited by a scheme approved under Professional Standards Legislation.</span>
+      <span>&copy; <span id="yr"></span> RJS Accounting Services</span>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE -->
+<div class="sticky">
+  <a class="call" href="tel:0754999299"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h3l2 5-2 1a11 11 0 0 0 5 5l1-2 5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>Call</a>
+  <a class="book" href="#book"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Book now</a>
+</div>
+
+<!-- BIO MODAL -->
+<div class="modal" id="bioModal" role="dialog" aria-modal="true" aria-labelledby="bioName" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card">
+    <button class="modal-x" type="button" data-close aria-label="Close profile">&times;</button>
+    <div class="modal-head">
+      <div class="modal-pic"><div class="scene" id="bioScene"></div><span class="ini" id="bioIni"></span><img class="photo" id="bioPhoto" alt="" /></div>
+      <div class="txt"><div class="modal-role" id="bioRole"></div><h3 id="bioName"></h3></div>
+    </div>
+    <div class="modal-body" id="bioBody"></div>
+    <div class="modal-foot"><a class="btn btn-coral" href="#book" data-close-go>Book with us <span class="arr">&rarr;</span></a></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var doc=document;
+  doc.getElementById('yr').textContent=new Date().getFullYear();
+
+  // header shadow
+  var header=doc.getElementById('top');
+  var onScroll=function(){header.classList.toggle('scrolled',window.scrollY>10)};
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  // mobile menu
+  var burger=doc.querySelector('.burger'),drawer=doc.getElementById('drawer');
+  var toggle=function(o){drawer.classList.toggle('open',o);burger.classList.toggle('open',o);burger.setAttribute('aria-expanded',o?'true':'false');doc.body.style.overflow=o?'hidden':''};
+  burger.addEventListener('click',function(){toggle(!drawer.classList.contains('open'))});
+  drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){toggle(false)})});
+
+  // reveal
+  var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(reduce){doc.querySelectorAll('.reveal,.stagger').forEach(function(e){e.classList.add('in')})}
+  else{
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){var el=e.target;if(el.classList.contains('stagger')){Array.prototype.forEach.call(el.children,function(c,i){c.style.transitionDelay=(i*0.06)+'s'})}el.classList.add('in');io.unobserve(el)}})},{threshold:0.12,rootMargin:'0px 0px -6% 0px'});
+    doc.querySelectorAll('.reveal,.stagger').forEach(function(e){io.observe(e)});
+  }
+
+  // services carousel
+  var track=doc.getElementById('svcTrack');
+  if(track){
+    var cards=track.children, dotsWrap=doc.getElementById('svcDots');
+    var perView=function(){var w=window.innerWidth;return w<=760?1:(w<=980?2:3)};
+    var pages=function(){return Math.max(1,cards.length-perView()+1)};
+    function buildDots(){
+      dotsWrap.innerHTML='';
+      for(var i=0;i<pages();i++){(function(i){var b=doc.createElement('button');b.type='button';b.setAttribute('aria-label','Go to slide '+(i+1));b.addEventListener('click',function(){track.scrollTo({left:cards[i].offsetLeft-track.offsetLeft,behavior:'smooth'})});dotsWrap.appendChild(b)})(i)}
+      syncDots();
+    }
+    function syncDots(){
+      var idx=Math.round(track.scrollLeft/(cards[0].offsetWidth+ (parseFloat(getComputedStyle(track).columnGap)||22)));
+      Array.prototype.forEach.call(dotsWrap.children,function(d,i){d.classList.toggle('active',i===Math.min(idx,dotsWrap.children.length-1))});
+    }
+    track.addEventListener('scroll',function(){window.requestAnimationFrame(syncDots)},{passive:true});
+    doc.querySelectorAll('.svc-nav button').forEach(function(btn){
+      btn.addEventListener('click',function(){var step=cards[0].offsetWidth+(parseFloat(getComputedStyle(track).columnGap)||22);track.scrollBy({left:step*parseInt(btn.dataset.dir,10),behavior:'smooth'})});
+    });
+    var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(buildDots,200)});
+    buildDots();
+  }
+
+  // booking form -> prefilled enquiry
+  window.rjsBook=function(e){
+    e.preventDefault();
+    var svc=doc.getElementById('qb-svc').value;
+    var name=doc.getElementById('qb-name').value.trim();
+    var contact=doc.getElementById('qb-contact').value.trim();
+    var body='Hi RJS team,%0D%0A%0D%0AI would like to book a '+encodeURIComponent(svc)+' appointment.%0D%0A%0D%0AName: '+encodeURIComponent(name||'(not given)')+'%0D%0ABest contact: '+encodeURIComponent(contact||'(not given)')+'%0D%0A%0D%0AThanks!';
+    window.location.href='mailto:info@rjsaccounting.com.au?subject='+encodeURIComponent('Appointment request: '+svc)+'&body='+body;
+    return false;
+  };
+
+  // ===== bio modal =====
+  var BIOS={"kylie": {"name": "Kylie Anderson", "role": "Director", "ini": "KA", "scene": "sc-plum", "sections": [{"h": "Why she gets up in the morning", "p": ["Kylie is passionate about everything in life. She loves her work, and has done since she left university in WA many years ago. Since losing her husband in 2006, she has devoted herself to giving, both to loved ones and to others.", "In June 2010 she co-founded Free To Shine Ltd, a charity whose mission is to empower with an education to prevent sex trafficking. When she is not working with clients or the very special girls the charity supports, Kylie loves to travel and explore new places, living life to the full.", "On 12 March 2012, Kylie met Mr Paul Dunn of B1G1 and says her life changed again. She immediately committed to B1G1 as a business partner for life, and does her very best to live their philosophy daily."]}, {"h": "Why she is such an asset to you", "p": ["Kylie became the Director of RJS Accounting Services Pty Ltd in October 2000. She began her professional career with RSM Bird Cameron (now RSMi) in Perth during 1989. That position took her far and wide, with appointments in Western Australian regional centres (Merredin and Kalgoorlie), a secondment with RSM Robson Rhodes in London, and finally the position of Manager in RSM Bird Cameron's Adelaide office, where she was responsible for the growth and development of audit and business services throughout South Australia.", "Kylie is a proud member of Chartered Accountants Australia and New Zealand, a CA SMSF Specialist, a Registered SMSF Auditor and an Authorised Representative of SMSF Advisers Network, with extensive experience in business services, auditing and tax compliance."]}]}, "nell": {"name": "Nell Purser", "role": "Accountant & Client Services Team Leader", "ini": "NP", "scene": "sc-warm", "sections": [{"h": "Why she gets up in the morning", "p": ["Nell has three major commitments in her life: her family, her work, and her responsibilities as a board member and director of a local charity. All of these she addresses with passion, sometimes beyond calling.", "With a husband, children and two Hungarian Vizsla dogs that keep her happy and extremely busy, she also cares full time for her elderly mother and is a board member and director of a local charity that empowers vulnerable individuals, including domestic violence survivors, people with disabilities, and communities in need of aid. In addition to all of this she works full time and manages to keep RJS running smoothly and efficiently. Now that is inspiring."]}, {"h": "Why she is such an asset to you", "p": ["Nell offers a wealth of experience in the accounting profession. In over 30 years she has gained an outstanding knowledge of our business, and now focuses on the management and administration of our firm.", "Nell studied part time for a Bachelor of Commerce, Accounting Major at the University of Southern Queensland. Her prowess was acknowledged by receiving the Dean's Award for Outstanding Academic Achievement. She has also completed a Certificate IV in Human Resource Management and is passionate about issues surrounding people and performance, helping staff to better understand their roles and mentoring many of our newer team members.", "She is an extremely capable member of our staff, having attended numerous industry courses and seminars, conducted staff training, implemented client and office accounting software packages, and created documentation and system procedures. Nell plays an important role in assisting our senior accountants and is a very important point of contact for all our amazing clients."]}]}, "penelope": {"name": "Penelope Marsh", "role": "Chartered Accountant", "ini": "PM", "scene": "sc-lilac", "sections": [{"h": "Why she gets up in the morning", "p": ["Penny chose a career in public practice because she loves people, and loves to get behind their goals, whether it is championing their small to medium business or helping them move from one lifestyle phase to another. Penny enjoys taking an educative approach with clients and assisting with improving practices, goal setting and overcoming challenges. She has built strong relationships of stewardship and trust with her clients, showing care and dedication in all she does."]}, {"h": "Why she is such an asset to you", "p": ["Penny has 30 years of experience in the accounting industry, with previous roles in corporate compliance and company secretarial work, both for private and publicly listed companies. She has been practising with RJS since 2008 and her specialities are tax and compliance, business services, financial modelling and forecasting, and audit and assurance.", "As a chartered accountant, registered tax agent and public practice certificate holder, Penny has the qualifications, experience and ongoing training to stay on the cutting edge of this dynamic and constantly evolving role, whether advising on traditional business structures or emerging digital currency."]}]}, "scott": {"name": "Scott Edmonds", "role": "Accountant", "ini": "SE", "scene": "sc-soft", "sections": [{"h": "Why he gets up in the morning", "p": ["Scott loves helping small business owners succeed and build profitable, successful and sustainable businesses, while helping them avoid the common pitfalls and costly mistakes that can cripple a growing business.", "He is driven to help business owners pay no more than their fair share of tax, so they keep more of their hard-earned money where it rightfully belongs, in their pockets. He will help you turn those profits into real wealth for your future.", "Besides all of these work-related reasons to get out of bed, Scott has three almost-grown children, 18 year old twins and a 23 year old daughter. They all live in Sydney, so when he is not travelling down there, they are on his doorstep on the Sunshine Coast. He is a mad keen sports fan, sadly following the Sharks in the NRL, but we will convert him to a West Coast Eagles AFL fan before too long. With his love of sports, the very responsible betting competition he has with Sunil in the office is a hot topic of interest, regardless of the game."]}, {"h": "Why he is such an asset to you", "p": ["He is not just a numbers guy and chartered accountant, he is also an accredited business growth specialist and virtual CFO who helps business owners keep more of the money they make. With over 36 years of experience working closely with small business owners, including having run his own successful businesses, he loves to share proven business strategies to help others succeed, and is a wonderful addition to our team."]}]}, "terry": {"name": "Terry Bates", "role": "Accountant", "ini": "TB", "scene": "sc-plum", "sections": [{"h": "Why he gets up in the morning", "p": ["In mid 2021, after losing a close family member and a couple of close friends, the Woodgate Bear, as he likes to be known, decided that after 17 years in the idyllic beachside town of Woodgate it was time to move on and seek a quieter place to call home.", "After searching far and wide and looking at hundreds of properties, he and his partner Jan found what they decided was their forever home. On 19 October 2021 they moved to the small village of Carruchan, just ten minutes drive northwest of Cardwell in Far North Queensland. A beautiful home on three acres of rainforest, some might call it jungle, was what they desired, and they are now well on the way to creating their tropical paradise.", "The Bear enjoys the laid-back lifestyle and, if not making gardens and tracks through the bush on their property, you will find him out on the water exploring the magnificent islands of the Hinchinbrook and Cassowary Coast, maybe dropping a pot looking for those great FNQ muddies, or wetting a line hoping for some luck fishing. At 71 years young, and after some major surgery in March 2023, Terry says he has another 30 years in him, so he does not intend slowing down any time soon."]}, {"h": "Why he is such an asset to you", "p": ["Terry joined the firm in March 2000 and, until his move to Far North Queensland in October 2021, divided his time between our Tewantin and Woodgate offices, managing clients in both areas. Since then he still works remotely from home in FNQ and visits Woodgate and Tewantin four times a year.", "Working reduced hours has given him a renewed vitality and enthusiasm for work and life. With more than 40 years of experience in the accounting industry, he still has a lot to offer both the firm and its valued clients. Previous experience includes various senior management positions in accounting firms in Brisbane and regional Queensland, as well as five years running a small business. It is this experience that allows Terry to understand the needs and expectations of business clients, both large and small, and his knowledge enables him to provide the necessary advice and support."]}]}, "sunil": {"name": "Sunil Singh Panwar", "role": "Accountant", "ini": "SP", "scene": "sc-warm", "sections": [{"h": "Why he gets up in the morning", "p": ["Sunil is determined to build his career by mastering his knowledge with continuous learning, and is currently studying the Graduate Diploma of Chartered Accountants with CAANZ, so he will soon be a chartered accountant.", "He has a small family with a daughter who keeps him busy when he is not at work, or while cycling the streets of Mountain Creek thanks to our fabulous weather. Sunil is a fierce supporter of India in the cricket, which leads to some fun times, and losing bets, in the office over summer."]}, {"h": "Why he is such an asset to you", "p": ["Sunil has a Master of Accounting from the University of the Sunshine Coast and brings six years of practical experience to the team, with previous roles both in public practice and as a management accountant in the manufacturing industry. He joined the RJS team during 2022 and specialises in individual tax returns, Business Activity Statements and assisting senior accountants wherever he can.", "Being the youngest on the team, not that he is bragging, he receives supervision from the senior accountants and gets to learn from all the experts on the panel. He also brings an unending enthusiasm for his job and an infectious laugh."]}]}, "marie": {"name": "Marie Collard", "role": "Accountant / Bookkeeper", "ini": "MC", "scene": "sc-lilac", "sections": [{"h": "Why she gets up in the morning", "p": ["Marie is determined to be part of an excellent accounting team that brings success to businesses, beyond the realms of imagination. She is passionate about changing lives and is keen to work with the team of highly qualified accountants here at RJS, continue her lifelong learning, and help your business thrive.", "Marie moved to the Sunshine Coast from Victoria with her husband during 2023 for our Queensland lifestyle. She has two daughters and seven grandchildren who thankfully visit regularly. When she is not working, you will likely see her walking along the river."]}, {"h": "Why she is such an asset to you", "p": ["Having completed her Bachelor of Accounting from La Trobe University, Melbourne in 2021, Marie has a wealth of practical experience in finance and accounting and is an associate member of CPA Australia and IPA Australia. Her previous work history saw her start with basic bookkeeping and accounting before progressing to senior roles in financial and management accounting.", "Marie has supported a range of businesses, from the corporate world to community organisations and individual businesses, for over 20 years. She has also run her own business for over 15 years, providing a bookkeeping and accounting service to lawyers, designers, builders, property managers and entrepreneurs, to name a few. She joined RJS during July 2024, specialising in client accounting systems and Business Activity Statements. She is a Collingwood supporter, but, like Scott, we will work on converting her to a West Coast Eagles fan over time."]}]}, "tayla": {"name": "Tayla Bodard", "role": "Assistant Accountant", "ini": "TB", "scene": "sc-soft", "sections": [{"h": "", "p": ["Tayla is one of our assistant accountants and a valued part of the RJS team. A full profile is on its way, so check back soon."]}]}, "karen": {"name": "Karen Ebzery", "role": "Client Services Team Member", "ini": "KE", "scene": "sc-plum", "sections": [{"h": "Why she gets up in the morning", "p": ["Karen's real passion is people. She is from a big family and loves spending time with people and helping them.", "She moved up to the Sunshine Coast from Victoria with her husband in 2020, just as the borders closed. She has two adult sons and two adult stepsons. She loves travelling in her caravan with husband Bernie and golden labrador Max, in between visits to their seven grandkids spread out from country Victoria to Airlie Beach. She is a passionate Collingwood supporter, much to Kylie's dismay, a V8 Supercars fan, and has also jumped on the NRL bandwagon following the Storm."]}, {"h": "Why she is such an asset to you", "p": ["Karen's working career has always been in administration, and she considers the best part of her day to be the people she works with and the clients she comes in contact with. Her background is in insurance, having worked as a client manager at a Melbourne based firm for 20 years. Karen joined our team in May 2025, and we are excited to have her with us."]}]}, "jane": {"name": "Jane Long", "role": "Client Services Team Member", "ini": "JL", "scene": "sc-warm", "sections": [{"h": "Why she gets up in the morning", "p": ["Jane says that her biggest accomplishment is her family. She has three boys, with the youngest only arriving in September 2024. Originally from the Sunshine Coast, Jane moved north to Moranbah in 2022 with her husband Tyson. In her spare time, she enjoys packing up their caravan and travelling around, making memories with her family."]}, {"h": "Why she is such an asset to you", "p": ["In between maternity leaves, Jane has worked with RJS since September 2013 and is an important part of our Client Services team. Prior to that she also worked in the accounting industry, so our clients benefit from her many years of experience. She is currently our overnight fairy, working her hours around her family's needs, but always available when we need her. We are so happy to continue to have her as part of our team."]}]}};
+
+  var modal=doc.getElementById('bioModal'), lastFocus=null;
+  function openBio(id){
+    var b=BIOS[id]; if(!b||!modal) return;
+    doc.getElementById('bioScene').className='scene '+b.scene;
+    doc.getElementById('bioIni').textContent=b.ini;
+    doc.getElementById('bioRole').textContent=b.role;
+    doc.getElementById('bioName').textContent=b.name;
+    var ph=doc.getElementById('bioPhoto');
+    if(ph){ ph.style.display=''; ph.alt=b.name; ph.onerror=function(){ this.style.display='none'; }; ph.src='images/'+id+'.jpg'; }
+    var body=doc.getElementById('bioBody'); body.innerHTML='';
+    b.sections.forEach(function(s){
+      var blk=doc.createElement('div'); blk.className='blk';
+      if(s.h){var h=doc.createElement('h4'); h.textContent=s.h; blk.appendChild(h);}
+      s.p.forEach(function(t){var p=doc.createElement('p'); p.textContent=t; blk.appendChild(p);});
+      body.appendChild(blk);
+    });
+    body.scrollTop=0;
+    lastFocus=doc.activeElement;
+    modal.hidden=false; doc.body.style.overflow='hidden';
+    modal.querySelector('.modal-x').focus();
+  }
+  function closeBio(){ if(!modal) return; modal.hidden=true; doc.body.style.overflow=''; if(lastFocus&&lastFocus.focus) lastFocus.focus(); }
+  doc.querySelectorAll('.mem[data-bio]').forEach(function(m){ m.addEventListener('click',function(){ openBio(m.getAttribute('data-bio')); }); });
+  if(modal){
+    modal.addEventListener('click',function(e){ if(e.target.hasAttribute('data-close')) closeBio(); });
+    modal.querySelector('[data-close-go]').addEventListener('click',function(){ closeBio(); });
+    modal.addEventListener('keydown',function(e){
+      if(e.key!=='Tab') return;
+      var f=modal.querySelectorAll('button,a[href]'); if(!f.length) return;
+      var first=f[0], last=f[f.length-1];
+      if(e.shiftKey && doc.activeElement===first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && doc.activeElement===last){ e.preventDefault(); first.focus(); }
+    });
+    doc.addEventListener('keydown',function(e){ if(e.key==='Escape' && !modal.hidden) closeBio(); });
+  }
+})();
+</script>
+</body>
+</html>
