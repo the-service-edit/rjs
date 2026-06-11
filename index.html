@@ -271,8 +271,8 @@ nav.main a:hover{color:var(--plum-ink)}
 .b1g-stats .l{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:.3rem}
 
 /* ============ TESTIMONIALS ============ */
-.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.2rem,2.5vw,1.8rem)}
-.tcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:2rem 1.7rem;display:flex;flex-direction:column}
+.tg{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(1.2rem,2.5vw,1.8rem)}
+.tcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:2rem 1.7rem;display:flex;flex-direction:column;flex:1 1 300px;max-width:380px}
 .tcard .stars{color:var(--coral);letter-spacing:1px;margin-bottom:1rem}
 .tcard blockquote{margin:0 0 1.5rem;font-size:1.05rem;line-height:1.55;color:var(--plum-ink);font-weight:500}
 .tcard .by{margin-top:auto;font-size:.9rem;font-weight:700;color:var(--plum-ink)}
@@ -307,7 +307,7 @@ footer{background:var(--plum-ink);color:#C9BCCE;padding-top:clamp(3.5rem,6vw,5re
 .f-logo img{height:42px;width:auto;margin-bottom:1.2rem}
 .f-top .blurb{color:#9F90A6;font-size:.93rem;max-width:32ch;margin:0}
 .f-col h4{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#897B90;margin:0 0 1.1rem}
-.f-col a,.f-col span{display:block;color:#C9BCCE;font-size:.93rem;margin-bottom:.65rem;transition:color .3s var(--ease)}
+.f-col a,.f-col span{display:block;color:#C9BCCE;font-size:.93rem;margin-bottom:.65rem;overflow-wrap:anywhere;transition:color .3s var(--ease)}
 .f-col a:hover{color:#fff}
 .f-bot{display:flex;flex-wrap:wrap;gap:.8rem 2rem;justify-content:space-between;align-items:center;padding-top:1.7rem;font-size:.78rem;color:#7C6F83}
 .f-bot a{color:#7C6F83}.f-bot a:hover{color:#C9BCCE}
@@ -344,6 +344,9 @@ footer{background:var(--plum-ink);color:#C9BCCE;padding-top:clamp(3.5rem,6vw,5re
 }
 @media (max-width:760px){
   nav.main,.head-act .phone,.head-act .btn{display:none}
+  .svc-track{align-items:start}
+  .f-top{grid-template-columns:1fr 1fr;gap:2rem 1.6rem}
+  .f-logo{grid-column:1/-1}
   .burger{display:flex}
   .bar{height:68px}
   .logo img{height:42px}
@@ -603,6 +606,8 @@ footer{background:var(--plum-ink);color:#C9BCCE;padding-top:clamp(3.5rem,6vw,5re
       <figure class="tcard" style="margin:0"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>I came to Penny with a pile of paperwork and a 'disaster'. She took it all, worked it out, and took me through it. I couldn't have been more grateful. If you are looking for an accounting firm to really look after you, and your money, I highly recommend RJS, especially Penny, our Tax Angel.</blockquote><figcaption class="by">Dana Nichol<span class="src">Google review</span></figcaption></figure>
       <figure class="tcard" style="margin:0"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>As a new client of RJS I have found the service way above average. Costs have been extremely competitive, and the service efficient and very friendly.</blockquote><figcaption class="by">Barry Richardson<span class="src">Google review</span></figcaption></figure>
       <figure class="tcard" style="margin:0"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>I've used a number of accounting firms over my many years in the music industry, but none better than RJS. Special thanks to Penny and Jane who keep me updated and out of the hands of the ATO. Brilliant.</blockquote><figcaption class="by">Dennis Dunstan<span class="src">Frontrow Management &middot; Google review</span></figcaption></figure>
+      <figure class="tcard" style="margin:0"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>My wife and I have been using RJS for 5 years or so now. Try running a business and keeping up with those tax laws. If they weren't any good, would I still be using them after 5 years? Thanks Penny and the team.</blockquote><figcaption class="by">Peter Walker<span class="src">Google review</span></figcaption></figure>
+      <figure class="tcard" style="margin:0"><div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>I have been in business for 20 years and RJS have been looking after me for many years now. Nothing is too much trouble and they are only a phone call away if you have any queries. I have total confidence in them.</blockquote><figcaption class="by">Susan Taylor<span class="src">Google review</span></figcaption></figure>
     </div>
   </div>
 </section>
