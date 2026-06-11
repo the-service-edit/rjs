@@ -98,7 +98,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,su
 @media (prefers-reduced-motion:reduce){.announce .pulse{animation:none}}
 
 /* ============ HEADER ============ */
-header{position:sticky;top:0;z-index:60;background:rgba(251,248,242,.9);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .4s var(--ease),box-shadow .4s var(--ease)}
+header{position:sticky;top:0;z-index:60;background:#fff;border-bottom:1px solid transparent;transition:border-color .4s var(--ease),box-shadow .4s var(--ease)}
 header.scrolled{border-bottom-color:var(--line);box-shadow:0 10px 30px -26px rgba(58,28,66,.5)}
 .bar{display:flex;align-items:center;justify-content:space-between;height:88px;gap:1.5rem}
 .logo{display:flex;align-items:center}
@@ -178,11 +178,11 @@ nav.main a:hover{color:var(--plum-ink)}
 .svc-nav button:hover{background:var(--plum);color:#fff;border-color:var(--plum)}
 .svc-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 2*1.4rem)/3);gap:1.4rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:.5rem;margin:0 calc(-1*var(--gut));padding-left:var(--gut);padding-right:var(--gut)}
 .svc-track::-webkit-scrollbar{display:none}
-.svc-card{scroll-snap-align:start;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.svc-card{scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
 .svc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-.svc-card .top{position:relative;aspect-ratio:16/9}
-.svc-card .top .ico{position:absolute;left:16px;bottom:-22px;z-index:5;width:54px;height:54px;border-radius:15px;background:#fff;display:grid;place-items:center;color:var(--plum);box-shadow:var(--shadow-sm)}
-.svc-card .body{padding:2rem 1.6rem 1.6rem;display:flex;flex-direction:column;flex:1}
+.svc-card .ico{width:52px;height:52px;border-radius:14px;background:var(--coral-soft);color:var(--coral-deep);display:grid;place-items:center;margin-bottom:1.3rem}
+.svc-card:nth-child(even) .ico{background:var(--lilac-2);color:var(--plum)}
+.svc-card .body{padding:clamp(1.8rem,2.6vw,2.3rem);display:flex;flex-direction:column;flex:1}
 .svc-card h3{font-size:1.28rem;margin:0 0 .5rem}
 .svc-card p{font-size:.94rem;color:var(--muted);margin:0 0 1.3rem}
 .svc-card .go{margin-top:auto;display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:.9rem;color:var(--coral-deep)}
@@ -209,6 +209,10 @@ nav.main a:hover{color:var(--plum-ink)}
 .ben-item h3{font-size:1.1rem;margin:0 0 .35rem}
 .ben-item p{font-size:.92rem;color:var(--muted);margin:0}
 .ben-fig .img{aspect-ratio:4/4.6;border-radius:var(--r);box-shadow:var(--shadow)}
+.why-benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(1.4rem,2.5vw,2rem)}
+.team-intro{text-align:center;max-width:640px;margin:clamp(3rem,6vw,4.2rem) auto clamp(2rem,4vw,2.6rem)}
+.team-intro .eyebrow{justify-content:center}
+.team-intro p{color:var(--muted);margin:.9rem 0 0}
 
 /* ============ TEAM ============ */
 .team-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(1.1rem,2vw,1.6rem)}
@@ -330,6 +334,7 @@ footer{background:var(--plum-ink);color:#C9BCCE;padding-top:clamp(3.5rem,6vw,5re
   .qb{grid-template-columns:1fr 1fr;gap:.9rem}
   .qb .btn{grid-column:1/-1}
   .ben{grid-template-columns:1fr}
+  .why-benefits{grid-template-columns:repeat(2,1fr)}
   .ben-fig{order:-1;max-width:420px;margin:0 auto}
   .team-grid{grid-template-columns:repeat(4,1fr)}
   .tg{grid-template-columns:1fr}
@@ -367,6 +372,7 @@ footer{background:var(--plum-ink);color:#C9BCCE;padding-top:clamp(3.5rem,6vw,5re
 }
 @media (max-width:480px){
   .team-grid{grid-template-columns:repeat(2,1fr)}
+  .why-benefits{grid-template-columns:1fr}
   .hero h1{font-size:2.15rem;line-height:1.08}
   .h-lg{font-size:1.7rem}
 }
@@ -499,28 +505,22 @@ footer{background:var(--plum-ink);color:#C9BCCE;padding-top:clamp(3.5rem,6vw,5re
 
     <div class="svc-track" id="svcTrack">
       <article class="svc-card">
-        <div class="top img"><div class="scene sc-warm"></div><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 3h6l4 4v14H6V5"/><path d="M14 3v4h4"/><path d="M9 13h6M9 17h4"/></svg></span></div>
-        <div class="body"><h3>Individual Tax Returns</h3><p>Friendly, accurate returns that make sure you claim everything you are entitled to, explained in plain English.</p><a class="go" href="#book">Book a time <span class="arr">&rarr;</span></a></div>
+        <div class="body"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 3h6l4 4v14H6V5"/><path d="M14 3v4h4"/><path d="M9 13h6M9 17h4"/></svg></span><h3>Individual Tax Returns</h3><p>Friendly, accurate returns that make sure you claim everything you are entitled to, explained in plain English.</p><a class="go" href="#book">Book a time <span class="arr">&rarr;</span></a></div>
       </article>
       <article class="svc-card">
-        <div class="top img"><div class="scene sc-plum"></div><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg></span></div>
-        <div class="body"><h3>Business Accounting &amp; Tax</h3><p>Financial statements, BAS, IAS and company returns, plus help setting up companies and trusts as you grow. We mind the numbers so you can run the business.</p><a class="go" href="#book">Book a time <span class="arr">&rarr;</span></a></div>
+        <div class="body"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg></span><h3>Business Accounting &amp; Tax</h3><p>Financial statements, BAS, IAS and company returns, plus help setting up companies and trusts as you grow. We mind the numbers so you can run the business.</p><a class="go" href="#book">Book a time <span class="arr">&rarr;</span></a></div>
       </article>
       <article class="svc-card">
-        <div class="top img"><div class="scene sc-lilac"></div><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></span></div>
-        <div class="body"><h3>SMSF</h3><p>Licensed self-managed super advice and administration, from setting up your fund to contribution and pension strategies, all kept simple to understand.</p><a class="go" href="#book">Book a time <span class="arr">&rarr;</span></a></div>
+        <div class="body"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></span><h3>SMSF</h3><p>Licensed self-managed super advice and administration, from setting up your fund to contribution and pension strategies, all kept simple to understand.</p><a class="go" href="#book">Book a time <span class="arr">&rarr;</span></a></div>
       </article>
       <article class="svc-card">
-        <div class="top img"><div class="scene sc-soft"></div><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h2M8 17h5"/></svg></span></div>
-        <div class="body"><h3>Bookkeeping &amp; Software</h3><p>Registered partners for Xero, MYOB and QuickBooks. We set it up, keep it tidy, and help whenever you get stuck.</p><a class="go" href="#book">Book a time <span class="arr">&rarr;</span></a></div>
+        <div class="body"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h2M8 17h5"/></svg></span><h3>Bookkeeping &amp; Software</h3><p>Registered partners for Xero, MYOB and QuickBooks. We set it up, keep it tidy, and help whenever you get stuck.</p><a class="go" href="#book">Book a time <span class="arr">&rarr;</span></a></div>
       </article>
       <article class="svc-card">
-        <div class="top img"><div class="scene sc-warm"></div><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5M4 19l5-4 4 3 7-7"/></svg></span></div>
-        <div class="body"><h3>Business Advisory</h3><p>Business plans, budgets, cashflow forecasts, quarterly reviews and friendly coaching to help your business function fabulously.</p><a class="go" href="#book">Book a time <span class="arr">&rarr;</span></a></div>
+        <div class="body"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5M4 19l5-4 4 3 7-7"/></svg></span><h3>Business Advisory</h3><p>Business plans, budgets, cashflow forecasts, quarterly reviews and friendly coaching to help your business function fabulously.</p><a class="go" href="#book">Book a time <span class="arr">&rarr;</span></a></div>
       </article>
       <article class="svc-card">
-        <div class="top img"><div class="scene sc-plum"></div><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M5 8l7-5 7 5"/><path d="M5 8v8l7 4 7-4V8"/></svg></span></div>
-        <div class="body"><h3>Succession Planning</h3><p>Not the easiest conversation, but an important one. We'll guide you through it gently, and keep a record safe for you and your family.</p><a class="go" href="#book">Book a time <span class="arr">&rarr;</span></a></div>
+        <div class="body"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M5 8l7-5 7 5"/><path d="M5 8v8l7 4 7-4V8"/></svg></span><h3>Succession Planning</h3><p>Not the easiest conversation, but an important one. We'll guide you through it gently, and keep a record safe for you and your family.</p><a class="go" href="#book">Book a time <span class="arr">&rarr;</span></a></div>
       </article>
     </div>
     <div class="dots" id="svcDots"></div>
@@ -543,36 +543,26 @@ footer{background:var(--plum-ink);color:#C9BCCE;padding-top:clamp(3.5rem,6vw,5re
   </div>
 </section>
 
-<!-- BENEFITS / WHY -->
+<!-- WHY RJS + TEAM -->
 <section class="section tint" id="why">
-  <div class="wrap ben">
-    <figure class="ben-fig reveal" style="margin:0">
-      <!-- Real photo: warm client conversation across a timber table -->
-      <div class="img"><div class="scene sc-lilac"></div></div>
-    </figure>
-    <div class="reveal">
-      <span class="eyebrow"><span class="dot"></span>Why RJS</span>
-      <h2 class="h-lg" style="margin-bottom:1rem">Friendly, talented, and in your corner.</h2>
-      <p class="lede" style="margin-bottom:2rem">Good accounting comes down to relationships. You get the same friendly, talented faces year after year, people who get to know you and your goals, and give advice that actually makes sense.</p>
-      <div class="ben-list stagger">
-        <div class="ben-item"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 4v5c0 4.5-3.4 7.5-8 9-4.6-1.5-8-4.5-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Registered tax agents</h3><p>Qualified, accountable and on the TPB register. Your return is in safe hands.</p></div>
-        <div class="ben-item"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Proactive and creative</h3><p>We don't just lodge and leave. We look for ways to help you and your business do better.</p></div>
-        <div class="ben-item"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div><h3>We make a difference</h3><p>Through B1G1, every bit of work we do helps something good happen in the world.</p></div>
-        <div class="ben-item"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Here all year round</h3><p>Not just at tax time. We'd love to help whenever a question comes up.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TEAM -->
-<section class="section" id="team">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow"><span class="dot"></span>The people</span>
-      <h2 class="h-lg">A small firm of ten who do big things.</h2>
-      <p>The team you meet on day one is the team you keep.</p>
+      <span class="eyebrow"><span class="dot"></span>Why RJS</span>
+      <h2 class="h-lg">Friendly, talented, and in your corner.</h2>
+      <p>Good accounting comes down to relationships. You get the same friendly, talented faces year after year, people who get to know you and your goals, and give advice that actually makes sense.</p>
     </div>
-    <div class="team-grid stagger reveal">
+    <div class="why-benefits stagger reveal">
+      <div class="ben-item"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 4v5c0 4.5-3.4 7.5-8 9-4.6-1.5-8-4.5-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Registered tax agents</h3><p>Qualified, accountable and on the TPB register. Your return is in safe hands.</p></div>
+      <div class="ben-item"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Proactive and creative</h3><p>We don't just lodge and leave. We look for ways to help you and your business do better.</p></div>
+      <div class="ben-item"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div><h3>We make a difference</h3><p>Through B1G1, every bit of work we do helps something good happen in the world.</p></div>
+      <div class="ben-item"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Here all year round</h3><p>Not just at tax time. We'd love to help whenever a question comes up.</p></div>
+    </div>
+    <div class="team-intro reveal" id="team">
+      <span class="eyebrow"><span class="dot"></span>The people</span>
+      <h3 class="h-md">A small firm of ten who do big things.</h3>
+      <p>The team you meet on day one is the team you keep. Tap any of us to read their story.</p>
+    </div>
+<div class="team-grid stagger reveal">
       <button class="mem" type="button" data-bio="kylie" aria-haspopup="dialog"><div class="pic"><div class="scene sc-plum"></div><span class="ini">KA</span><img class="photo" src="images/kylie.jpg" alt="Kylie Anderson" loading="lazy" onerror="this.remove()" /><span class="view"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>View profile</span></div><div class="name">Kylie Anderson</div><div class="role">Director</div></button>
       <button class="mem" type="button" data-bio="nell" aria-haspopup="dialog"><div class="pic"><div class="scene sc-warm"></div><span class="ini">NP</span><img class="photo" src="images/nell.jpg" alt="Nell Purser" loading="lazy" onerror="this.remove()" /><span class="view"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>View profile</span></div><div class="name">Nell Purser</div><div class="role">Accountant &amp; Team Leader</div></button>
       <button class="mem" type="button" data-bio="penelope" aria-haspopup="dialog"><div class="pic"><div class="scene sc-lilac"></div><span class="ini">PM</span><img class="photo" src="images/penelope.jpg" alt="Penelope Marsh" loading="lazy" onerror="this.remove()" /><span class="view"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>View profile</span></div><div class="name">Penelope Marsh</div><div class="role">Chartered Accountant</div></button>
@@ -584,7 +574,6 @@ footer{background:var(--plum-ink);color:#C9BCCE;padding-top:clamp(3.5rem,6vw,5re
       <button class="mem" type="button" data-bio="karen" aria-haspopup="dialog"><div class="pic"><div class="scene sc-plum"></div><span class="ini">KE</span><img class="photo" src="images/karen.jpg" alt="Karen Ebzery" loading="lazy" onerror="this.remove()" /><span class="view"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>View profile</span></div><div class="name">Karen Ebzery</div><div class="role">Client Services</div></button>
       <button class="mem" type="button" data-bio="jane" aria-haspopup="dialog"><div class="pic"><div class="scene sc-warm"></div><span class="ini">JL</span><img class="photo" src="images/jane.jpg" alt="Jane Long" loading="lazy" onerror="this.remove()" /><span class="view"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>View profile</span></div><div class="name">Jane Long</div><div class="role">Client Services</div></button>
     </div>
-    <p class="reveal" style="margin:2rem 0 0;color:var(--faint);font-size:.9rem">Tap any of the team to read their story.</p>
   </div>
 </section>
 
